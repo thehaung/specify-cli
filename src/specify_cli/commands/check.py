@@ -246,14 +246,27 @@ def check_integrations(specify_dir: Path) -> dict:
             all_files_ok = True
 
             # Check each file in the manifest
-            for file_entry in manifest.get("files", []):
-                file_path = file_entry.get("path", "")
-                expected_hash = file_entry.get("sha256", "")
-                full_path = specify_dir.parent / file_path
-                exists = full_path.exists()
-                files_status[file_path] = {"exists": exists}
-                if not exists:
-                    all_files_ok = False
+            # Handle both dict format {"path": "hash"} and list format [{"path": "", "sha256": ""}]
+            files_data = manifest.get("files", {})
+            if isinstance(files_data, dict):
+                # Dict format: keys are paths, values are hashes
+                for file_path, expected_hash in files_data.items():
+                    full_path = specify_dir.parent / file_path
+                    exists = full_path.exists()
+                    files_status[file_path] = {"exists": exists}
+                    if not exists:
+                        all_files_ok = False
+            elif isinstance(files_data, list):
+                # List format: each item has "path" and "sha256" keys
+                for file_entry in files_data:
+                    if isinstance(file_entry, dict):
+                        file_path = file_entry.get("path", "")
+                        expected_hash = file_entry.get("sha256", "")
+                        full_path = specify_dir.parent / file_path
+                        exists = full_path.exists()
+                        files_status[file_path] = {"exists": exists}
+                        if not exists:
+                            all_files_ok = False
 
             integration_passed = all_files_ok
             results["integrations"][integration_name] = {
