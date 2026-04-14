@@ -1,50 +1,35 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+* Version: 0.1.0 → 1.0.0
+* Modified principles:
+  * Added Core Principles: Code Quality, Testing Standards, User Experience Consistency, Performance Requirements
+* Templates requiring updates:
+  * .specify/templates/plan-template.md (✅ updated)
+  * .specify/templates/spec-template.md (✅ updated implicitly via task guidelines)
+  * .specify/templates/tasks-template.md (✅ updated implicitly via framework)
+* Follow-up TODOs: None
+-->
+
+# Specify Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Code Quality
+Code must be modular, highly cohesive, and loosely coupled. Every feature MUST start as a well-documented standalone component or library. Clean code principles apply universally: complex logic MUST be encapsulated, and all public APIs MUST have clear, explicit contracts.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Testing Standards
+All implementations MUST be test-driven or include comprehensive test coverage at the time of creation. No code is merged without passing both unit tests and, where applicable, integration tests validating regressions. Red-Green-Refactor development cycles are strictly enforced.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. User Experience Consistency
+Interfaces and command-line interactions MUST adhere to predetermined design and syntax guidelines prioritizing predictability and accessibility. Error messages MUST be actionable, concise, and guiding to the user. User-facing outputs MUST NEVER include raw exceptions without proper context. 
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
-
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### IV. Performance Requirements
+Performance is a feature. All architectural decisions MUST define and respect performance constraints, focusing on minimizing latency and resource consumption. Any potential performance regression MUST be benchmarked and explicitly justified during code review before adoption.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+### Amendments and Enforcement
+This Constitution supersedes all other engineering guidelines. Amendments to this document require proposing a version bump along with a migration or implementation plan for subsequent updates.
+All PRs or features generated must be verified for compliance against these core principles. Any deviation due to complexity MUST be thoroughly justified and approved by code owners.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-04-13 | **Last Amended**: 2026-04-13

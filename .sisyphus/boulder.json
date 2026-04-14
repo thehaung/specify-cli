@@ -1,0 +1,29 @@
+{
+  "active_plan": "/Users/thehaung/Developer/Active/specify/.sisyphus/plans/specify-cli.md",
+  "started_at": "2026-04-13T14:56:25.995Z",
+  "session_ids": [
+    "ses_278df5a74ffecrFhRVgtvtG51o",
+    "ses_278a51b43ffeAIz6yHOEO7OY3U",
+    "ses_278a4b551ffeSPcf1aW7AVVmBt",
+    "ses_278a3e3fffferGdfu3jAPLvjRk"
+  ],
+  "plan_name": "specify-cli",
+  "worktree_path": null,
+  "session_origins": {
+    "ses_278df5a74ffecrFhRVgtvtG51o": "direct",
+    "ses_278a51b43ffeAIz6yHOEO7OY3U": "appended",
+    "ses_278a4b551ffeSPcf1aW7AVVmBt": "appended",
+    "ses_278a3e3fffferGdfu3jAPLvjRk": "appended"
+  },
+  "task_sessions": {
+    "todo:1": {
+      "task_key": "todo:1",
+      "task_label": "1",
+      "task_title": "Project Scaffolding + pyproject.toml",
+      "session_id": "ses_278a3e3fffferGdfu3jAPLvjRk",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-04-13T15:00:54.001Z"
+    }
+  }
+}
