@@ -40,7 +40,7 @@ htmlcov/
 # AI output
 .agent/
 .opencode/
-.sysyphus/
+.sisyphus/
 .specfiy/
 
 # Other
