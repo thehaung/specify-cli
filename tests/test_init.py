@@ -57,7 +57,7 @@ def test_init_amazonq_creates_skills(runner: CliRunner, tmp_path: Path):
 
     assert result.exit_code == 0
 
-    skills_dir = project_dir / ".specify" / "amazonq" / "skills"
+    skills_dir = project_dir / ".amazonq" / "skills"
     assert skills_dir.exists()
 
     skill_files = list(skills_dir.rglob("*.md"))
@@ -120,7 +120,7 @@ def test_init_both_integrations(runner: CliRunner, tmp_path: Path):
 
     assert result.exit_code == 0
 
-    amazonq_skills_dir = project_dir / ".specify" / "amazonq" / "skills"
+    amazonq_skills_dir = project_dir / ".amazonq" / "skills"
     assert amazonq_skills_dir.exists()
     amazonq_files = list(amazonq_skills_dir.rglob("*.md"))
     assert len(amazonq_files) >= 9

@@ -50,9 +50,9 @@ class CursorIntegration(SkillsIntegration):
         skills_path.mkdir(parents=True, exist_ok=True)
         created_files.append(skills_path)
 
-        commands_dir = templates_dir / "commands"
-        if commands_dir.exists():
-            for template_file in commands_dir.rglob(f"*{self.file_extension}"):
+        skills_dir = templates_dir / "skills"
+        if skills_dir.exists():
+            for template_file in skills_dir.rglob(f"*{self.file_extension}"):
                 base_name = template_file.stem
                 skill_dir = skills_path / base_name
                 skill_dir.mkdir(parents=True, exist_ok=True)

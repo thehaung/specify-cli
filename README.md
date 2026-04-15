@@ -91,7 +91,7 @@ specify-cli check --json
 
 ### Amazon Q
 
-Amazon Q integration installs skills into `.specify/amazonq/skills/` with manifest tracking.
+Amazon Q integration installs skills into `.amazonq/skills/` with manifest tracking at `.specify/integrations/amazonq.manifest.json`.
 
 ```bash
 specify-cli init --ai amazonq --here
@@ -136,6 +136,15 @@ For Cursor integration only:
 └── rules/
     └── specify-rules.mdc    # Project context rules
 ```
+
+For Amazon Q integration only:
+
+```
+.amazonq/
+└── skills/                   # Amazon Q skill definitions
+```
+
+Integration manifests are stored at `.specify/integrations/`.
 
 ## Development
 
