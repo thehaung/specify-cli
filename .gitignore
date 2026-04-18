@@ -46,3 +46,4 @@ htmlcov/
 
 # Other
 bin/
+.ruff_cache/
