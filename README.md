@@ -154,19 +154,3 @@ Integration manifests are stored at `.specify/integrations/`.
 pip install -e ".[dev]"
 pytest
 ```
-
-### Requirements
-
-- Python 3.11+
-- typer >= 0.9.0
-- rich >= 13.0.0
-
-## License
-
-MIT
-
-Verification Scaffolding (New)
-- A lightweight verification framework scaffold has been added to the repository under .specify/verification.
-- It includes plans, checks, and templates to bootstrap automated verification workflows.
-- You can initialize the scaffold in a project directory to start a minimal verification workflow:
-- Example: python3 -c 'from specify_cli.verification.runner import init_run; init_run(Path(".").resolve())'
